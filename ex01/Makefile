@@ -1,0 +1,21 @@
+NAME	= phonebook
+CC		= c++
+FLAGS	= -Wall -Werror -Wextra -std=c++98
+RM		= rm -rf
+
+SRCS	= main.cpp Contact.cpp PhoneBook.cpp
+
+all: $(NAME)
+
+$(NAME):
+	@ $(CC) $(FLAGS) $(SRCS) -o $(NAME)
+
+clean:
+	@$(RM) $(NAME)
+
+fclean:
+	@$(RM) $(NAME)
+
+re: clean all
+
+.PHONY: all clean re
